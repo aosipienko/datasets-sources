@@ -28,6 +28,10 @@ datasets:
     title: Politically Exposed Persons (PEPs) Voivodes
     path: /datasets/pl_pep_voivodes.entities.ftm.json
 
+  - name: pl_pep_local_gov
+    title: Politically Exposed Persons (PEPs) Local goverment
+    path: /datasets/pl_pep_local_gov.entities.ftm.json
+
   - name: sanctions
     title: Full sanctions index
     datasets:
@@ -41,4 +45,5 @@ datasets:
       - pl_peps_cities
       - pl_local_gov
       - pl_pep_voivodes
+      - pl_pep_local_gov
       - op_peps
