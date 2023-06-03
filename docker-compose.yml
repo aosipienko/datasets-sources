@@ -1,0 +1,66 @@
+version: "3.9"
+services:
+  index:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.7.0
+    expose:
+      - "9200"
+    ports:
+      - "127.0.0.1:9200:9200"
+    container_name: index
+    environment:
+      - node.name=index
+      - cluster.name=digger-index
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - index-os-data:/usr/share/elasticsearch/data
+    deploy:
+      placement:
+        max_replicas_per_node: 1
+      restart_policy:
+        condition: on-failure
+
+  app:
+    image: digger:latest
+    depends_on:
+      - index
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      YENTE_ELASTICSEARCH_URL: http://index:9200
+      YENTE_STATEMENT_API: "false"
+      # Set this to a randomly generated string to enable the /updatez API:
+      YENTE_UPDATE_TOKEN: "asd"
+      YENTE_MANIFEST: /manifest/manifest.yml
+    # If you want to index data from the host machine as a custom dataset,
+    # create a volume mount here to make that data accessible from the 
+    # container:
+    # volumes:
+    #   - "/path/on/the/host/computer:/data"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8000/healthz" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 3s
+    deploy:
+      mode: replicated
+      # Run multiple instances for better scale:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        max_attempts: 3
+        window: 120s
+    volumes:
+      - ./manifest.yml:/manifest/manifest.yml
+      - ./datasets/:/datasets
+
+volumes:
+  index-os-data: null

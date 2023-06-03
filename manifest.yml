@@ -5,7 +5,7 @@ datasets:
 
   - name: pl_mswia_sanctions
     title: PL MSWiA Sanctions
-    path: /datasets/plmswia.entities.ftm.json
+    path: /datasets/pl_mswia_sanctions.entities.ftm.json
 
   - name: eu_fsf
     title: EU Financial Sanctions Files (FSF)
@@ -41,4 +41,4 @@ datasets:
       - pl_peps_cities
       - pl_pep_voivodes
       - pl_pep_local_gov
-      - op_peps
+      # - op_peps
