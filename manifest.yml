@@ -11,18 +11,14 @@ datasets:
     title: EU Financial Sanctions Files (FSF)
     entities_url: https://sanction-spotter.hobly.pl/datasets/latest/eu_fsf/entities.ftm.json
 
- - name: op_peps
-   title: Politically Exposed Persons (PEPs)
-   entities_url: https://sanction-spotter.hobly.pl/datasets/latest/peps/entities.ftm.json
+  - name: os_peps
+    title: Politically Exposed Persons (PEPs)
+    entities_url: https://sanction-spotter.hobly.pl/datasets/latest/peps/entities.ftm.json
   #  path: /manifest/peps.entities.ftm.json
 
   - name: pl_peps_cities
     title: Politically Exposed Persons (PEPs) City Mayors
     path: /datasets/pl_pep_cities.entities.ftm.json
-
-  - name: pl_local_gov
-    title: Politically Exposed Persons (PEPs) City Mayors
-    path: /datasets/pl_local_gov.entities.ftm.json
 
   - name: pl_pep_voivodes
     title: Politically Exposed Persons (PEPs) Voivodes
@@ -43,7 +39,6 @@ datasets:
     title: Consolidated Politically Exposed Persons (PEPs)
     datasets:
       - pl_peps_cities
-      - pl_local_gov
       - pl_pep_voivodes
       - pl_pep_local_gov
       - op_peps
