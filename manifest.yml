@@ -20,11 +20,11 @@ datasets:
     title: Politically Exposed Persons (PEPs) City Mayors
     path: /datasets/pl_pep_cities.entities.ftm.json
 
-  - name: pl_pep_voivodes
+  - name: pl_peps_voivodes
     title: Politically Exposed Persons (PEPs) Voivodes
     path: /datasets/pl_pep_voivodes.entities.ftm.json
 
-  - name: pl_pep_local_gov
+  - name: pl_peps_local_gov
     title: Politically Exposed Persons (PEPs) Local goverment
     path: /datasets/pl_pep_local_gov.entities.ftm.json
 
@@ -39,6 +39,6 @@ datasets:
     title: Consolidated Politically Exposed Persons (PEPs)
     datasets:
       - pl_peps_cities
-      - pl_pep_voivodes
-      - pl_pep_local_gov
-      # - op_peps
+      - pl_peps_voivodes
+      - pl_peps_local_gov
+      - os_peps

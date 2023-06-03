@@ -27,11 +27,11 @@ services:
         condition: on-failure
 
   app:
-    image: digger:latest
+    image: ghcr.io/opensanctions/yente:latest
     depends_on:
       - index
     ports:
-      - "127.0.0.1:8000:8000"
+      - "8000:8000"
     environment:
       YENTE_ELASTICSEARCH_URL: http://index:9200
       YENTE_STATEMENT_API: "false"
