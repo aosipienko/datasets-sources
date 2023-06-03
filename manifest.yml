@@ -18,15 +18,19 @@ datasets:
 
   - name: pl_peps_cities
     title: Politically Exposed Persons (PEPs) City Mayors
-    path: /datasets/pl_pep_cities.entities.ftm.json
+    path: /datasets/pl_peps_cities.entities.ftm.json
 
   - name: pl_peps_voivodes
     title: Politically Exposed Persons (PEPs) Voivodes
-    path: /datasets/pl_pep_voivodes.entities.ftm.json
+    path: /datasets/pl_peps_voivodes.entities.ftm.json
 
   - name: pl_peps_local_gov
     title: Politically Exposed Persons (PEPs) Local goverment
-    path: /datasets/pl_pep_local_gov.entities.ftm.json
+    path: /datasets/pl_peps_local_gov.entities.ftm.json
+
+  - name: pl_peps_voivodship_board
+    title: Politically Exposed Persons (PEPs) Voivodeship Board Members
+    path: /datasets/pl_peps_voivodship_board.entities.ftm.json
 
   - name: sanctions
     title: Full sanctions index
@@ -41,4 +45,5 @@ datasets:
       - pl_peps_cities
       - pl_peps_voivodes
       - pl_peps_local_gov
+      - pl_peps_voivodship_board
       - os_peps
