@@ -5,25 +5,28 @@ datasets:
 
   - name: pl_mswia_sanctions
     title: PL MSWiA Sanctions
-    path: /manifest/plmswia.entities.ftm.json
-#    entities_url: https://sanction-spotter.hobly.pl/datasets/latest/pl_mswia_sanctions/entities.ftm.json
+    path: /datasets/plmswia.entities.ftm.json
 
   - name: eu_fsf
     title: EU Financial Sanctions Files (FSF)
     entities_url: https://sanction-spotter.hobly.pl/datasets/latest/eu_fsf/entities.ftm.json
 
-#  - name: peps
-#    title: Politically Exposed Persons (PEPs)
-#    entities_url: https://sanction-spotter.hobly.pl/datasets/latest/peps/entities.ftm.json
-#    path: /manifest/peps.entities.ftm.json
+ - name: op_peps
+   title: Politically Exposed Persons (PEPs)
+   entities_url: https://sanction-spotter.hobly.pl/datasets/latest/peps/entities.ftm.json
+  #  path: /manifest/peps.entities.ftm.json
 
   - name: pl_peps_cities
     title: Politically Exposed Persons (PEPs) City Mayors
-    path: /manifest/pl_pep_cities.entities.ftm.json
+    path: /datasets/pl_pep_cities.entities.ftm.json
 
   - name: pl_local_gov
     title: Politically Exposed Persons (PEPs) City Mayors
-    path: /manifest/pl_local_gov.entities.ftm.json
+    path: /datasets/pl_local_gov.entities.ftm.json
+
+  - name: pl_pep_voivodes
+    title: Politically Exposed Persons (PEPs) Voivodes
+    path: /datasets/pl_pep_voivodes.entities.ftm.json
 
   - name: sanctions
     title: Full sanctions index
@@ -37,3 +40,5 @@ datasets:
     datasets:
       - pl_peps_cities
       - pl_local_gov
+      - pl_pep_voivodes
+      - op_peps
