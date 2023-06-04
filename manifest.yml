@@ -35,6 +35,11 @@ datasets:
   - name: pl_peps_public_func
     title: Politically Exposed Persons (PEPs) Public Positions And Functions
     path: /datasets/pl_peps_public_func.entities.ftm.json
+
+  - name: pl_peps_adhoc
+    title: Politically Exposed Persons (PEPs) Added by hand
+    path: /datasets/pl_peps_adhoc.entities.ftm.json
+
   - name: sanctions
     title: Full sanctions index
     datasets:
@@ -50,4 +55,5 @@ datasets:
       - pl_peps_local_gov
       - pl_peps_voivodship_board
       - pl_peps_public_func
+      - pl_peps_adhoc
       - os_peps
