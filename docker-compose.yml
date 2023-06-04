@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   index:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.7.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.8.0
     expose:
       - "9200"
     ports:
@@ -19,24 +19,28 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - index-os-data:/usr/share/elasticsearch/data
+      - digger-index-data:/usr/share/elasticsearch/data
     deploy:
       placement:
         max_replicas_per_node: 1
       restart_policy:
         condition: on-failure
 
-  app:
-    image: ghcr.io/opensanctions/yente:latest
+  digger:
+    # image: ghcr.io/opensanctions/yente:latest
+    image: digger-2:latest
     depends_on:
       - index
     ports:
       - "8000:8000"
     environment:
       YENTE_ELASTICSEARCH_URL: http://index:9200
+      YENTE_INDEX_CONCURRENCY: 10
+      YENTE_QUERY_CONCURRENCY: 20
       YENTE_STATEMENT_API: "false"
+      value: "* */12 * * *"
       # Set this to a randomly generated string to enable the /updatez API:
-      YENTE_UPDATE_TOKEN: "asd"
+      YENTE_UPDATE_TOKEN: ""
       YENTE_MANIFEST: /manifest/manifest.yml
     # If you want to index data from the host machine as a custom dataset,
     # create a volume mount here to make that data accessible from the 
@@ -63,4 +67,4 @@ services:
       - ./datasets/:/datasets
 
 volumes:
-  index-os-data: null
+  digger-index-data: null
