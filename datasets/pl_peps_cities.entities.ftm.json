@@ -110,3 +110,4 @@
 {"id":"pl-pep-janusz-kubicki","caption":"Janusz Kubicki","schema":"Person","properties":{"name":["Janusz Kubicki"],"birthDate":["1969-12-31"],"topics":["role.pep"],"position":["Prezydent miasta Zielona Góra, woj. lubuskie (kadencja 2018–2024)"],"status":["Domestic Politically Exposed Person"]},"datasets":["pl_pep"]}
 {"id":"pl-pep-waldemar-socha","caption":"Waldemar Socha","schema":"Person","properties":{"name":["Waldemar Socha"],"birthDate":["1962-11-21"],"topics":["role.pep"],"position":["Prezydent miasta Żory, woj. śląskie (kadencja 2018–2024)"],"status":["Domestic Politically Exposed Person"]},"datasets":["pl_pep"]}
 {"id":"pl-pep-lucjan-chrzanowski","caption":"Lucjan Chrzanowski","schema":"Person","properties":{"name":["Lucjan Chrzanowski"],"birthDate":["1965-01-01"],"topics":["role.pep"],"position":["Prezydent miasta Żyrardów, woj. mazowieckie (kadencja 2018–2024)"],"status":["Domestic Politically Exposed Person"]},"datasets":["pl_pep"]}
+
