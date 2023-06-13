@@ -1,59 +1,29 @@
 datasets:
-  - name: pl_knf_warnings
-    title: PL KNF Warnings
-    entities_url: https://sanction-spotter.hobly.pl/datasets/latest/pl_knf_warnings/entities.ftm.json
+  - name: pl_sanctions
+    title: PL KNF Warnings and MSWIA Sanctions
+    path: /datasets/pl_sanctions.entities.ftm.json
 
-  - name: pl_mswia_sanctions
-    title: PL MSWiA Sanctions
-    path: /datasets/pl_mswia_sanctions.entities.ftm.json
-
-  - name: eu_fsf
+  - name: eu_fsf_sanctions
     title: EU Financial Sanctions Files (FSF)
-    entities_url: https://sanction-spotter.hobly.pl/datasets/latest/eu_fsf/entities.ftm.json
+    path: /datasets/eu_fsf.entities.ftm.json
 
   - name: os_peps
     title: Politically Exposed Persons (PEPs)
     entities_url: https://sanction-spotter.hobly.pl/datasets/latest/peps/entities.ftm.json
   #  path: /manifest/peps.entities.ftm.json
 
-  - name: pl_peps_cities
-    title: Politically Exposed Persons (PEPs) City Mayors
-    path: /datasets/pl_peps_cities.entities.ftm.json
-
-  - name: pl_peps_voivodes
-    title: Politically Exposed Persons (PEPs) Voivodes
-    path: /datasets/pl_peps_voivodes.entities.ftm.json
-
-  - name: pl_peps_local_gov
-    title: Politically Exposed Persons (PEPs) Local goverment
-    path: /datasets/pl_peps_local_gov.entities.ftm.json
-
-  - name: pl_peps_voivodship_board
-    title: Politically Exposed Persons (PEPs) Voivodeship Board Members
-    path: /datasets/pl_peps_voivodship_board.entities.ftm.json
-
-  - name: pl_peps_public_func
-    title: Politically Exposed Persons (PEPs) Public Positions And Functions
-    path: /datasets/pl_peps_public_func.entities.ftm.json
-
-  - name: pl_peps_adhoc
-    title: Politically Exposed Persons (PEPs) Added by hand
-    path: /datasets/pl_peps_adhoc.entities.ftm.json
+  - name: pl_peps
+    title: Politically Exposed Persons (PEPs) in Poland 
+    path: /datasets/pl_peps.entities.ftm.json
 
   - name: sanctions
     title: Full sanctions index
     datasets:
-      - pl_knf_warnings
-      - pl_mswia_sanctions
-      - eu_fsf
+      - pl_sanctions
+      - eu_fsf_sanctions
 
   - name: peps
     title: Consolidated Politically Exposed Persons (PEPs)
     datasets:
-      - pl_peps_cities
-      - pl_peps_voivodes
-      - pl_peps_local_gov
-      - pl_peps_voivodship_board
-      - pl_peps_public_func
-      - pl_peps_adhoc
+      - pl_peps
       - os_peps
