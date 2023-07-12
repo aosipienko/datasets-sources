@@ -1,7 +1,11 @@
 datasets:
-  - name: pl_sanctions
-    title: PL KNF Warnings and MSWIA Sanctions
-    path: /datasets/pl_sanctions.entities.ftm.json
+  - name: pl_mswia_sanctions
+    title: PL MSWIA Sanctions
+    path: /datasets/pl_mswia_sanctions.entities.ftm.json
+
+  - name: pl_knf_warnings
+    title: PL KNF Warnings
+    path: /datasets/pl_knf_warnings.entities.ftm.json
 
   - name: eu_fsf_sanctions
     title: EU Financial Sanctions Files (FSF)
@@ -19,7 +23,8 @@ datasets:
   - name: sanctions
     title: Full sanctions index
     datasets:
-      - pl_sanctions
+      - pl_mswia_sanctions
+      - pl_knf_warnings
       - eu_fsf_sanctions
 
   - name: peps
