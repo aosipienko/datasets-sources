@@ -11,6 +11,10 @@ datasets:
     title: EU Financial Sanctions Files (FSF)
     path: /datasets/eu_fsf.entities.ftm.json
 
+  - name: uk_ofsi_sanctions
+    title: UK Office of Financial Sanctions Implementation (OFSI)
+    path: /datasets/uk_ofsi.entities.ftm.json
+
   - name: os_peps
     title: Politically Exposed Persons (PEPs)
     entities_url: https://sanction-spotter.hobly.pl/datasets/latest/peps/entities.ftm.json
@@ -26,6 +30,7 @@ datasets:
       - pl_mswia_sanctions
       - pl_knf_warnings
       - eu_fsf_sanctions
+      - uk_fst_sanctions
 
   - name: peps
     title: Consolidated Politically Exposed Persons (PEPs)
