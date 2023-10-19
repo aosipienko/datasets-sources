@@ -15,6 +15,10 @@ datasets:
     title: UK Office of Financial Sanctions Implementation (OFSI)
     path: /datasets/uk_ofsi.entities.ftm.json
 
+  - name: us_ofac_sanctions
+    title: US Office of Foreign Assets Control Specially Designated Nationals List (OFAC)
+    path: /datasets/us_ofac.entities.ftm.json
+
   - name: os_peps
     title: Politically Exposed Persons (PEPs)
     entities_url: https://sanction-spotter.hobly.pl/datasets/latest/peps/entities.ftm.json
@@ -30,7 +34,8 @@ datasets:
       - pl_mswia_sanctions
       - pl_knf_warnings
       - eu_fsf_sanctions
-      - uk_fst_sanctions
+      - uk_ofsi_sanctions
+      - us_ofac_sanctions
 
   - name: peps
     title: Consolidated Politically Exposed Persons (PEPs)
