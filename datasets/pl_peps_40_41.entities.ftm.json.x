@@ -1,4 +1,3 @@
-
 {"id":"pl-pep-adam-struzik","caption":"Adam Struzik","schema":"Person","properties":{"name":["Adam Struzik"],"topics":["role.pep"],"position":["Marszałek Województwa Mazowieckiego"],"status":["Domestic Politically Exposed Person"]},"datasets":["pl_pep"]}
 {"id":"pl-pep-agnieszka-kapala-sokalska","caption":"Agnieszka Kapała-Sokalska","schema":"Person","properties":{"name":["Agnieszka Kapała-Sokalska"],"topics":["role.pep"],"position":["Członek Zarządu Województwa Pomorskiego"],"status":["Domestic Politically Exposed Person"]},"datasets":["pl_pep"]}
 {"id":"pl-pep-andrzej-betkowski","caption":"Andrzej Bętkowski","schema":"Person","properties":{"name":["Andrzej Bętkowski"],"topics":["role.pep"],"position":["Marszałek Województwa Świętokrzyskiego"],"status":["Domestic Politically Exposed Person"]},"datasets":["pl_pep"]}
